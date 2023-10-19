@@ -142,12 +142,16 @@ end
 
 
 local function usage(code)
-p([[Usage: luaenv luarocks [<luarocks-version>] [--verbose]
+p([[Usage: luaenv luarocks <-h|--help|--list|--uninstall|luarocks-version> [--verbose]
 
 Install specified version of LuaRocks for your Lua installtion in luaenv.
 
-<luarocks-version>: install specified version of LuaRocks
-                    (default to latest known stable version).
+--list:           list all installable versions.
+
+--uninstall:      uninstall current installed luaRocks in luaenv.
+
+luarocks-version: install specified version of LuaRocks
+                  (default to latest known stable version).
 ]])
 
   os.exit(code or 1)
